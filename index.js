@@ -36,7 +36,7 @@ function applyFlag(img, code) {
 function flagImg(code, lazy) {
   const img = document.createElement("img");
   img.className = "flag-img";
-  img.width = 20; img.height = 15;
+  img.width = 40; img.height = 40;
   img.decoding = "async";
   if (lazy) img.loading = "lazy";
   applyFlag(img, code);
