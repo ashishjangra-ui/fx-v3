@@ -24,16 +24,13 @@ const FLAG_BASE = "https://flagcdn.com/";
 
 function applyFlag(img, code) {
   const c = CURRENCY_COUNTRY[code];
-  // clear Webflow's own responsive attributes so they don't override our src
   img.removeAttribute("srcset");
   img.removeAttribute("sizes");
   img.alt = "";
   img.onerror = () => { img.style.visibility = "hidden"; };
   if (!c) { img.style.visibility = "hidden"; return; }
-  const cc = c.toLowerCase();
   img.style.visibility = "";
-  img.src = FLAG_BASE + "20x15/" + cc + ".png";
-  img.srcset = FLAG_BASE + "40x30/" + cc + ".png 2x, " + FLAG_BASE + "60x45/" + cc + ".png 3x";
+  img.src = FLAG_BASE + c.toLowerCase() + ".svg";
 }
 
 function flagImg(code, lazy) {
