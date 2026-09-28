@@ -30,7 +30,7 @@ function applyFlag(img, code) {
   img.onerror = () => { img.style.visibility = "hidden"; };
   if (!c) { img.style.visibility = "hidden"; return; }
   img.style.visibility = "";
-  img.src = FLAG_BASE + c.toLowerCase() + ".svg";
+  img.src = "https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/flags/1x1/" + c.toLowerCase() + ".svg";
 }
 
 function flagImg(code, lazy) {
